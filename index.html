@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body{
+        background: gray;
+        }
+.color-box{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    animation:colorchage 5s  infinite;
+    position: relative;
+}
+@keyframes colorchage {
+    0%{
+background: #000;
+left: 0px;
+top: 0px;
+border-radius: 0%;
+}
+    25%{
+background: #855d5d;
+left: 300px;
+top: 0px;
+
+border-radius: 15%;
+    }
+    50%{
+        background: #2168aa;
+        left: 300px;
+        top: 200px;
+        border-radius: 50%;
+    }
+    75%{
+        background: #a79c9c;
+        left: 0px;
+        top: 200px;
+        border-radius: 30%;
+    }
+    100%{
+        background: hsl(0, 85%, 28%);
+        left: 0px;
+        border-radius: 0%;
+top: 0px;
+    }
+}
+.wheels{
+    display: flex;
+    justify-content: space-around;
+
+}
+.wheels img{
+    animation: wheelrotating 10s 0s infinite linear;
+}
+.wheels img{
+   
+    width: 35px;
+    height: 35px;
+    margin-left: 3px;
+   
+}
+.car-img{
+    width: 300px;
+  margin-bottom: -105px;
+}
+.car-move{
+        position: fixed;
+        bottom:0px;
+        left: 300px;
+        animation:carmoving 15s  0s linear infinite ;
+}
+@keyframes wheelrotating {
+    0%{
+transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(3600deg);
+        
+    }
+}
+@keyframes carmoving {
+    0%{
+     left: -300px;
+
+    }
+    100%{
+        left: 120%;
+
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="color-box"></div>
+ <div class="car-move">
+<img  class="car-img " src=" car.jpg" alt="">
+
+<div class="wheels">
+    <img src="wheels.jpeg" alt="">
+    <img src="wheels.jpeg" alt="">
+</div>
+
+ </div>
+    
+</body>
+</html>
